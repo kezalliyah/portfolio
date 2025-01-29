@@ -246,10 +246,21 @@
       color: red;
     }
 
-    .social-links a {
-  font-size: 50px; 
+    .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+    margin-top: 20px;
+  }
+
+  .social-links a {
+  font-size: 45px; 
   transition: transform 0.3s, box-shadow 0.3s;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
 
 .social-links a:nth-child(1) { color: #1877F2; } 
 .social-links a:nth-child(2) { color: #E4405F; } 
