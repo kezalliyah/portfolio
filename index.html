@@ -245,35 +245,23 @@
       color: red;
     }
 
-    .contact-form {
-      max-width: 500px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
+    .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
 
-    .contact-form input,
-    .contact-form textarea {
-      padding: 10px;
-      border-radius: 5px;
-      background: #5B4A56;
-      border: none;
-      color: white;
-    }
+  .social-icon img {
+    width: 50px;
+    transition: transform 0.3s, filter 0.3s, box-shadow 0.3s;
+  }
 
-    .contact-form button {
-      background: #895C8F;
-      padding: 10px;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      transition: transform 0.3s;
-    }
-
-    .contact-form button:hover {
-      transform: scale(1.1);
-    }
+  .social-icon:hover img {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+    box-shadow: 0 0 15px rgba(137, 92, 143, 0.8), 0 0 25px rgba(191, 136, 172, 0.6);
+  }
 
     footer {
       text-align: center;
@@ -370,18 +358,23 @@
       }
     }
   </script>
-  
   <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form action="#" method="POST" class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+  <div class="container">
+    <h2>Connect with Me</h2>
+    <div class="social-links">
+      <a href="https://www.facebook.com/share/1632GU84Kc/" target="_blank" class="social-icon">
+        <img src="facebook-icon.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/kesyuuhhh?igsh=dXU1bm1scTM3NnNo" target="_blank" class="social-icon">
+        <img src="instagram-icon.png" alt="Instagram">
+      </a>
+      <a href="https://x.com/kezalliyah?t=CPtjutEj2x_j41ACEj_7wA&s=09" target="_blank" class="social-icon">
+        <img src="twitter-icon.png" alt="Twitter">
+      </a>
     </div>
-  </section>
+  </div>
+</section>
+  
   <footer>
     <p>&copy; 2025 Keziah Alliyah O. Miday. All rights reserved.</p>
   </footer>
