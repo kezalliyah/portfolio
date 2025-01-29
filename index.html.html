@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>202410634 - Keziah Alliyah O. Miday - IT1C</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #F6EAF1;
+      color: #5B4A56;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    a:hover {
+      color: #895C8F;
+    }
+
+    h1, h2, h3 {
+      color: #895C8F;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      text-shadow: 2px 2px #F3D9E0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .navbar {
+      background: #BF88AC;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 10px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar ul {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .navbar a {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .navbar a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.1);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+      background: linear-gradient(145deg, #BF88AC, #895C8F);
+      color: white;
+      border-radius: 10px;
+      margin-top: 70px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      text-shadow: 2px 2px #5B4A56;
+    }
+
+    .hero .btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #5B4A56;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .hero .btn:hover {
+      background: #3E313B;
+      transform: scale(1.1);
+    }
+
+    section {
+      padding: 50px 20px;
+      margin: 40px 0;
+      border-radius: 10px;
+    }
+
+    .about {
+      background-color: rgba(191, 136, 172, 0.8);
+    }
+
+    .skills, .projects {
+      background-color: rgba(245, 198, 222, 0.8);
+    }
+
+    .contact {
+      background-color: #BF88AC;
+      color: white;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 150px;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.1);
+    }
+
+    .text p {
+      margin-bottom: 10px;
+    }
+
+    .skills-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .skill-item {
+      background: #BF88AC;
+      padding: 15px 30px;
+      color: white;
+      font-size: 18px;
+      text-align: center;
+      border-radius: 5px;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .skill-item:hover {
+      background: #895C8F;
+      transform: translateY(-5px);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-item {
+      background: #5B4A56;
+      border-radius: 5px;
+      text-align: center;
+      color: white;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .project-item:hover {
+      transform: scale(1.05);
+    }
+
+    .project-item img {
+      width: 65%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      border-radius: 5px;
+      background: #5B4A56;
+      border: none;
+      color: white;
+    }
+
+    .contact-form button {
+      background: #895C8F;
+      padding: 10px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: transform 0.3s;
+    }
+
+    .contact-form button:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #5B4A56;
+      color: white;
+      border-radius: 0 0 10px 10px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="home">
+    <h1>Welcome to my Portfolio!</h1>
+    <h2>My name is Alliyah</h2>
+    <p>Information Technology Student</p>
+    <a href="https://drive.google.com/file/d/1x93YJN055mkRVIk2n8g5IDdzuzVJAHHs" class="btn">RESUME</a>
+  </header>
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="keziah.jpg" alt="Profile Picture" class="profile-pic">
+        <div class="text">
+          <h3>I’m Keziah Alliyah O. Miday</h3>
+          <p>A <strong>Information Technology</strong> based in <strong>Philippines</strong>.</p>
+          <p>Hi I'm Keziah Alliyah O. Miday also known as "Kesha" at school but at house "Alliyah", 18 years old, I'm currently a student at Cavite State University Silang.</p>
+          <p><strong>Bachelor of Science in Information Technology</strong> - <strong>BSIT</strong> - <strong>1C.</strong></p>
+          <div class="social-icons">
+            <a href="https://github.com/kezalliyah">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>Programming Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item">HTML</div>
+        <div class="skill-item">CSS</div>
+        <div class="skill-item">C++</div>
+      </div>
+    </div>
+  </section>
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-item">
+          <img src="kez1.jpg" alt="Project 1">
+          <h3></h3>
+          <p>A C++ Calculator for Sum, Difference, Product, Quotient and Remainder of two numbers.</p>
+        </div>
+        <div class="project-item">
+          <img src="kez2.jpg" alt="Project 2">
+          <h3></h3>
+          <p>A C++ Console based color game developed collaboratively with my group members.</p>
+        </div>
+  </section>
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form action="#" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2025 Keziah Alliyah O. Miday. All rights reserved.</p>
+  </footer>
+</body>
+</html>
